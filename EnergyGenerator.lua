@@ -229,29 +229,29 @@ energyTable={
  },
  {set="Team Up",
   types={
-   ["Grass"]={steamUrl="1832405798628986164/8DAE81347A07897ACD085586A20D95CF2598E347/",num="1"},
-   ["Fire"]={steamUrl="1832405798628987149/3187D01AA63593BAD2A13058C9A64986771B83D5/",num="2"},
-   ["Water"]={steamUrl="1832405798628988741/04A35BDD099EBE7E18DBB9D7E7AB999D5BA66D9E/",num="3"},
-   ["Lightning"]={steamUrl="1832405798628989261/5967BCC4EB91584ABEB1680F1CF83B70302EAF52/",num="4"},
-   ["Psychic"]={steamUrl="1832405798628989709/D12DB2BE41A2185C11D87062EC08E285969F82A5/",num="5"},
-   ["Fighting"]={steamUrl="1832405798628991233/69EB109A4FE5D47D1B58FB59EC2517A30DB1DA20/",num="6"},
-   ["Darkness"]={steamUrl="1832405798628991928/8B177CCA848C1747B3790053958FAA79F3E0314B/",num="7"},
-   ["Metal"]={steamUrl="1832405798628992609/CC82A01EDC098ABEDA1376083E17D028F387A0A7/",num="8"},
-   ["Fairy"]={steamUrl="1832405798628993182/0CBE5BDF044B22B16510A8699F3B00CAC229C14C/",num="9"}
+   ["Grass"]={steamUrl="1832405798628986164/8DAE81347A07897ACD085586A20D95CF2598E347/",num="E1"},
+   ["Fire"]={steamUrl="1832405798628987149/3187D01AA63593BAD2A13058C9A64986771B83D5/",num="E2"},
+   ["Water"]={steamUrl="1832405798628988741/04A35BDD099EBE7E18DBB9D7E7AB999D5BA66D9E/",num="E3"},
+   ["Lightning"]={steamUrl="1832405798628989261/5967BCC4EB91584ABEB1680F1CF83B70302EAF52/",num="E4"},
+   ["Psychic"]={steamUrl="1832405798628989709/D12DB2BE41A2185C11D87062EC08E285969F82A5/",num="E5"},
+   ["Fighting"]={steamUrl="1832405798628991233/69EB109A4FE5D47D1B58FB59EC2517A30DB1DA20/",num="E6"},
+   ["Darkness"]={steamUrl="1832405798628991928/8B177CCA848C1747B3790053958FAA79F3E0314B/",num="E7"},
+   ["Metal"]={steamUrl="1832405798628992609/CC82A01EDC098ABEDA1376083E17D028F387A0A7/",num="E8"},
+   ["Fairy"]={steamUrl="1832405798628993182/0CBE5BDF044B22B16510A8699F3B00CAC229C14C/",num="E9"}
   },
   date="20190201"
  },
  {set="Sword & Shield",
   types={
-   ["Grass"]={steamUrl="1832405798628838691/9F72772F0F21C4F6455D35CDDA7C0387D2C344CD/",num="1"},
-   ["Fire"]={steamUrl="1832405798628839998/882EB1317DC1D12FF4994221E57FE41B4ECF8D70/",num="2"},
-   ["Water"]={steamUrl="1832405798628840522/64FB79B3C680D7B11BAEFD367E03115243508AC2/",num="3"},
-   ["Lightning"]={steamUrl="1832405798628842568/67A8211D36AE2FF603C7A4B775C894EA25EA9155/",num="4"},
-   ["Psychic"]={steamUrl="1832405798628843075/407375AECC10AD4150F2C70FBB63A0BAC0A9AE05/",num="5"},
-   ["Fighting"]={steamUrl="1832405798628843991/B1DDC67C84E0E0E1527F85058DCDF038DB9D8663/",num="6"},
-   ["Darkness"]={steamUrl="1832405798628844608/70C62511CA9F2631D1E1DE691F4099A8102EE7EC/",num="7"},
-   ["Metal"]={steamUrl="1832405798628845093/EC66EEED31A9BAB8CCEDBB7152B0B4EC4C9D6F55/",num="8"},
-   ["Fairy"]={steamUrl="1832405798628845735/B64816866B1D0B67963CE2E9114F77A2E9C3BD2E/",num="9"}
+   ["Grass"]={steamUrl="1832405798628838691/9F72772F0F21C4F6455D35CDDA7C0387D2C344CD/",num="E1"},
+   ["Fire"]={steamUrl="1832405798628839998/882EB1317DC1D12FF4994221E57FE41B4ECF8D70/",num="E2"},
+   ["Water"]={steamUrl="1832405798628840522/64FB79B3C680D7B11BAEFD367E03115243508AC2/",num="E3"},
+   ["Lightning"]={steamUrl="1832405798628842568/67A8211D36AE2FF603C7A4B775C894EA25EA9155/",num="E4"},
+   ["Psychic"]={steamUrl="1832405798628843075/407375AECC10AD4150F2C70FBB63A0BAC0A9AE05/",num="E5"},
+   ["Fighting"]={steamUrl="1832405798628843991/B1DDC67C84E0E0E1527F85058DCDF038DB9D8663/",num="E6"},
+   ["Darkness"]={steamUrl="1832405798628844608/70C62511CA9F2631D1E1DE691F4099A8102EE7EC/",num="E7"},
+   ["Metal"]={steamUrl="1832405798628845093/EC66EEED31A9BAB8CCEDBB7152B0B4EC4C9D6F55/",num="E8"},
+   ["Fairy"]={steamUrl="1832405798628845735/B64816866B1D0B67963CE2E9114F77A2E9C3BD2E/",num="E9"}
   },
   date="20200207"
  },
@@ -267,6 +267,19 @@ energyTable={
    ["Darkness"]={code="swsh7",setName="Evolving Skies",date="20210827",num="236"},
    ["Metal"]={code="swsh7",setName="Evolving Skies",date="20210827",num="237"}
   }
+ },
+ {set="Brilliant Stars",
+  types={
+   ["Grass"]={steamUrl="1832406432240990391/3F45DFB8FFB9CDEAC31784F09D4705C2E9F1A5A3/",num="E1"},
+   ["Fire"]={steamUrl="1832406432240990076/71C2F8C1D0560A5E3C1CCF958DA4B65020031094/",num="E2"},
+   ["Water"]={steamUrl="1832406432240994386/D8DC888E41B7A6F80396EB836C490F1D67C5297C/",num="E3"},
+   ["Lightning"]={steamUrl="1832406432240990826/1162515BF38EE6F7CD3D41155BD789851FF1CEBA/",num="E4"},
+   ["Psychic"]={steamUrl="1832406432240992849/C7806B9026D2422353F7AE556B6B961D2F70428E/",num="E5"},
+   ["Fighting"]={steamUrl="1832406432240991440/4BE42C9AFD6555D99336404B6AD85A35FAD4A3EB/",num="E6"},
+   ["Darkness"]={steamUrl="1832406432240989552/47F891820336C0DE510EF7EED357092B78E6282C/",num="E7"},
+   ["Metal"]={steamUrl="1832406432240992229/7CC4642391CF4AF2E6CCDF7D25575517FCF51AE2/",num="E8"},
+  },
+  date="20220225"
  }
 }
 
@@ -287,7 +300,9 @@ function DrawUI()
  local selfScale=self.getScale()
  local iconScale=tostring(1/selfScale.x*0.75).." "..tostring(1/selfScale.z*0.75).." 1"
  local count=1
- local XMLTable={makeButtonUI("❮","prevSet()","170 180 0"),makeButtonUI("❯","nextSet()","-170 180 0")}
+ makeButtonUI("<","prevSet",{-1.7,0,1.8},"Previous Set")
+ makeButtonUI(">","nextSet",{1.7,0,1.8},"Next Set")
+ local XMLTable={}
 
  for Type,data in pairs(energyTable[curSet].types) do
   local pos=""
@@ -316,26 +331,20 @@ function makeTypeUI(Type,scale,pos)
   }}
 end
 
-function makeButtonUI(text,func,pos)
- return {
-  tag="Panel",
-  attributes={
-   height=90,
-   width=60,
-   scale=iconScale,
-   rotation="0 0 180",
-   position=pos,
-   color="rgba(0,0,0,0.7)",
-   onClick=func,
-  },
-  children={
-   tag="Text",
-   value=text,
-   attributes={
-    alignment="UpperCenter",
-    fontSize=70,
-    color="White",
- }}}
+function makeButtonUI(text,func,pos,tool)
+ local selfScale=self.getScale()
+ local params={
+ function_owner=self,
+ label=text,
+ tooltip=tool,
+ font_size=380,
+ width=350,
+ height=350,
+ scale={1/selfScale.x,1/selfScale.y,1/selfScale.z},
+ position=pos,
+ click_function=func
+ }
+ self.createButton(params)
 end
 
 function changeType(player,newType)
