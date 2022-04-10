@@ -281,6 +281,17 @@ energyTable={
  }
 }
 
+iconURLs={
+ ["Grass"]="1030706086614178225/936511C7DE88071C0EFD164A0208E9A4F0790121/",
+ ["Fire"]="1030706086614178732/FB70D14FE2A4CA823E53CA4B950D58C999D57E4A/",
+ ["Water"]="1030706086614179173/A6197B243E1F67E908D76B837FC3EDCCCDD399EC/",
+ ["Lightning"]="1030706086614178847/5043B10E02EF709244486A5E2F037DFA5ABB5211/",
+ ["Psychic"]="1030706086614179070/5936733CF9AA0FEC120262A82643501F5D98BC01/",
+ ["Fighting"]="1030706086614178613/6211E80FA57B3462D3A78C725AE440B01D85F19B/",
+ ["Darkness"]="1030706086614178330/4BF95A690F7DA49C8FB1463B8E5F678703F7F45C/",
+ ["Metal"]="1030706086614178951/97976CC1484C2344BF88BC4EDFCB5E4A74594199/",
+ ["Fairy"]="1030706086614178507/2BB4792D5BF0D974368EFDE432484ABBCDB33AA0/"}
+
 function onLoad(state)
  if state and state!=""then
   local save=json.parse(state)
@@ -296,41 +307,40 @@ end
 
 function DrawUI()
  local selfScale=self.getScale()
- local iconScale=tostring(1/selfScale.x*0.75).." "..tostring(1/selfScale.z*0.75).." 1"
+ local iconScale={1/selfScale.x*0.75,1/selfScale.z*0.75,1}
  local count=1
- makeButtonUI("<","prevSet",{-1.7,0,1.8},"Previous Set")
- makeButtonUI(">","nextSet",{1.7,0,1.8},"Next Set")
- local XMLTable={}
+ makeButtonUI("<","prevSet",{-1.7,0,1.8},"Previous Set",selfScale,1)
+ makeButtonUI(">","nextSet",{1.7,0,1.8},"Next Set",selfScale,1)
+ for Type,_ in pairs(iconURLs)do
+  _G["changeType"..Type]=function()changeType(Type)end
+ end
+ local decalsTable={}
 
  for Type,data in pairs(energyTable[curSet].types) do
-  local pos=""
+  local pos={}
   if count<=3 then
-   pos=tostring(200-(100*count)).." -300 0"
+   pos={2-(1*count),0,-3}
   else
-   pos=tostring(170+(-340*(count%2))).." "..tostring(-180+(120*math.floor((count-4)/2))).." 0"
+   pos={1.7+(-3.4*(count%2)),0,-1.8+(1.2*math.floor((count-4)/2))}
   end
-  XMLTable[#XMLTable+1]=makeTypeUI(Type,iconScale,pos)
+  decalsTable[#decalsTable+1]=makeTypeUI(Type,iconScale,selfScale,pos)
   count=count+1
  end
- self.UI.setXmlTable(XMLTable)
+ self.setDecals(decalsTable)
 end
 
-function makeTypeUI(Type,scale,pos)
- return {
-  tag="Image",
-  attributes={
-   image=Type,
-   height=100,
-   width=100,
-   position=pos,
-   rotation="0 0 180",
-   scale=scale,
-   onClick="changeType("..Type..")",
-  }}
+function makeTypeUI(Type,iconScale,selfScale,pos)
+ makeButtonUI("","changeType"..Type,{pos[1]*-1,pos[2],pos[3]},Type,selfScale,0)
+ return
+ {name=Type.." decal",
+  url=getSteamUrl(iconURLs[Type]),
+  position=pos,
+  rotation={90,180,0},
+  scale=iconScale
+ }
 end
 
-function makeButtonUI(text,func,pos,tool)
- local selfScale=self.getScale()
+function makeButtonUI(text,func,pos,tool,scale,transparency)
  local params={
  function_owner=self,
  label=text,
@@ -338,14 +348,16 @@ function makeButtonUI(text,func,pos,tool)
  font_size=380,
  width=350,
  height=350,
- scale={1/selfScale.x,1/selfScale.y,1/selfScale.z},
  position=pos,
- click_function=func
+ scale={1/scale[1],1/scale[2],1/scale[3]},
+ click_function=func,
+ color={1,1,1,transparency}
  }
  self.createButton(params)
 end
 
-function changeType(player,newType)
+
+function changeType(newType)
  curType=newType
  changeArt()
 end
@@ -365,7 +377,7 @@ end
 function onObjectLeaveContainer(cont,leaving)
  if cont~=self then return end
  local setTable=energyTable[curSet]
- leaving.setCustomObject({face=getImageURL(),back="http://cloud-3.steamusercontent.com/ugc/809997459557414686/9ABD9158841F1167D295FD1295D7A597E03A7487/"})
+ leaving.setCustomObject({face=getImageURL(),back=getSteamUrl("809997459557414686/9ABD9158841F1167D295FD1295D7A597E03A7487/")})
  leaving.setName(curType.." Energy")
  leaving.setDescription((setTable.types[curType].setName or setTable.set).." #"..setTable.types[curType].num)
  leaving.memo=((setTable.types[curType].date or setTable.date)..setTable.types[curType].num)
@@ -376,8 +388,12 @@ function getImageURL()
  if setTable.api then
   return "https://images.pokemontcg.io/"..(setTable.code or setTable.types[curType].code).."/"..setTable.types[curType].num.."_hires.png?count="..setTable.types[curType].num
  else
-  return "http://cloud-3.steamusercontent.com/ugc/"..setTable.types[curType].steamUrl
+  return getSteamUrl(setTable.types[curType].steamUrl)
  end
+end
+
+function getSteamUrl(url)
+ return "http://cloud-3.steamusercontent.com/ugc/"..url
 end
 
 function changeArt()
