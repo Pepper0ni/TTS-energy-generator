@@ -2,6 +2,7 @@ energyTable={
  {set="Base",
   api=true,
   code="base1",
+  rarity="C",
   types={
    ["Grass"]={num="99"},
    ["Fire"]={num="98"},
@@ -15,6 +16,7 @@ energyTable={
  {set="Expedition Base Set",
   api=true,
   code="ecard1",
+  rarity="C",
   types={
    ["Grass"]={num="162"},
    ["Fire"]={num="161"},
@@ -28,6 +30,7 @@ energyTable={
  {set="Ruby & Sapphire",
   api=true,
   code="ex1",
+  rarity="C",
   types={
    ["Grass"]={num="104"},
    ["Fire"]={num="108"},
@@ -41,6 +44,7 @@ energyTable={
  {set="Emerald",
   api=true,
   code="ex9",
+  rarity="RH",
   types={
    ["Grass"]={num="101"},
    ["Fire"]={num="102"},
@@ -54,6 +58,7 @@ energyTable={
  {set="Holon Phantoms",
   api=true,
   code="ex13",
+  rarity="RH",
   types={
    ["Grass"]={num="105"},
    ["Fire"]={num="106"},
@@ -67,6 +72,7 @@ energyTable={
  {set="Power Keepers",
   api=true,
   code="ex16",
+  rarity="RH",
   types={
    ["Grass"]={num="103"},
    ["Fire"]={num="104"},
@@ -80,6 +86,7 @@ energyTable={
  {set="Diamond & Pearl",
   api=true,
   code="dp1",
+  rarity="C",
   types={
    ["Grass"]={num="123"},
    ["Fire"]={num="124"},
@@ -108,6 +115,7 @@ energyTable={
  {set="HeartGold & SoulSilver",
   api=true,
   code="hgss1",
+  rarity="C",
   types={
    ["Grass"]={num="115"},
    ["Fire"]={num="116"},
@@ -123,6 +131,7 @@ energyTable={
  {set="Black & White",
   api=true,
   code="bw1",
+  rarity="C",
   types={
    ["Grass"]={num="105"},
    ["Fire"]={num="106"},
@@ -138,6 +147,7 @@ energyTable={
  {set="XY",
   api=true,
   code="xy1",
+  rarity="C",
   types={
    ["Grass"]={num="132"},
    ["Fire"]={num="133"},
@@ -154,6 +164,7 @@ energyTable={
  {set="Generations",
   api=true,
   code="g1",
+  rarity="C",
   types={
    ["Grass"]={num="75"},
    ["Fire"]={num="76"},
@@ -184,6 +195,7 @@ energyTable={
  {set="Evolutions",
   api=true,
   code="xy12",
+  rarity="C",
   types={
    ["Grass"]={num="91"},
    ["Fire"]={num="92"},
@@ -198,6 +210,7 @@ energyTable={
   date="20161102"
  },
  {set="Sun & Moon",
+  rarity="C",
   types={
    ["Grass"]={steamUrl="1826780185929832402/5FE64CA2668E4A91ED64DD05E59D74CF958EADEB/",num="E1"},
    ["Fire"]={steamUrl="1826780185929832714/8853045CD1F634E848895927164FB5A522E39CEC/",num="E2"},
@@ -212,6 +225,7 @@ energyTable={
   date="20170203"
  },
  {set="Gen 7 Secret",
+  rarity="RS",
   api=true,
   types={
    ["Grass"]={code="sm2",setName="Guardians Rising",date="20170505",num="167"},
@@ -226,6 +240,7 @@ energyTable={
   }
  },
  {set="Team Up",
+  rarity="C",
   types={
    ["Grass"]={steamUrl="1832405798628986164/8DAE81347A07897ACD085586A20D95CF2598E347/",num="E1"},
    ["Fire"]={steamUrl="1832405798628987149/3187D01AA63593BAD2A13058C9A64986771B83D5/",num="E2"},
@@ -240,6 +255,7 @@ energyTable={
   date="20190201"
  },
  {set="Sword & Shield",
+  rarity="C",
   types={
    ["Grass"]={steamUrl="1832405798628838691/9F72772F0F21C4F6455D35CDDA7C0387D2C344CD/",num="E1"},
    ["Fire"]={steamUrl="1832405798628839998/882EB1317DC1D12FF4994221E57FE41B4ECF8D70/",num="E2"},
@@ -254,6 +270,7 @@ energyTable={
   date="20200207"
  },
  {set="Gen 8 Secret",
+  rarity="RS",
   api=true,
   types={
    ["Grass"]={code="swsh8",setName="Fusion Strike",date="20211112",num="283"},
@@ -267,6 +284,7 @@ energyTable={
   }
  },
  {set="Brilliant Stars",
+  rarity="C",
   types={
    ["Grass"]={steamUrl="1826780185929555880/372B5B066A086B8C2BE6BB12BFF22A06E670A7D4/",num="E1"},
    ["Fire"]={steamUrl="1826780185929553692/3C455F9E5B065CA3F187437CEF7C0C1DC18D3364/",num="E2"},
@@ -370,6 +388,7 @@ function onObjectLeaveContainer(cont,leaving)
  leaving.setCustomObject({face=getImageURL(),back=getSteamUrl("809997459557414686/9ABD9158841F1167D295FD1295D7A597E03A7487/")})
  leaving.setName(curType.." Energy")
  leaving.setDescription((setTable.types[curType].setName or setTable.set).." #"..setTable.types[curType].num)
+ if setTable.rarity then leaving.setDescription(leaving.getDescription().." "..setTable.rarity)end
  leaving.memo=((setTable.types[curType].date or setTable.date)..setTable.types[curType].num)
 end
 
