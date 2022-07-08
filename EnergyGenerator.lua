@@ -315,8 +315,8 @@ end
 function DrawUI()
  local scale=self.getScale()
  local count=1
- makeButtonUI("<","prevSet",{-1.7,0,1.8},"Previous Set",scale,1)
- makeButtonUI(">","nextSet",{1.7,0,1.8},"Next Set",scale,1)
+ makeButtonUI("<","prevSet",{-1.7,0.1,1.8},"Previous Set",scale,1)
+ makeButtonUI(">","nextSet",{1.7,0.1,1.8},"Next Set",scale,1)
  local XMLTable={}
 
  for Type,data in pairs(energyTable[curSet].types) do
@@ -341,7 +341,7 @@ function makeTypeUI(Type,scale,pos)
    image=Type,
    height=100,
    width=100,
-   position=tostring(pos[1]*100).." "..tostring(pos[3]*100).." 0",
+   position=tostring(pos[1]*100).." "..tostring(pos[3]*100).." -10",
    rotation="0 0 180",
    scale=tostring(1/scale.x*0.75).." "..tostring(1/scale.z*0.75).." 1",
    raycastTarget=false
