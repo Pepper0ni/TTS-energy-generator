@@ -313,7 +313,7 @@ function onLoad(state)
 end
 
 function DrawUI()
- local scale=self.getScale()
+ local scale={1,1,0.75}
  local count=1
  makeButtonUI("<","prevSet",{-1.7,0.1,1.8},"Previous Set",scale,1)
  makeButtonUI(">","nextSet",{1.7,0.1,1.8},"Next Set",scale,1)
@@ -339,11 +339,10 @@ function makeTypeUI(Type,scale,pos)
   tag="Image",
   attributes={
    image=Type,
-   height=100,
-   width=100,
+   height=112.5,
+   width=90,
    position=tostring(pos[1]*100).." "..tostring(pos[3]*100).." -10",
    rotation="0 0 180",
-   scale=tostring(1/scale.x*0.75).." "..tostring(1/scale.z*0.75).." 1",
    raycastTarget=false
   }}
 end
@@ -355,9 +354,8 @@ function makeButtonUI(text,func,pos,tool,scale,transparency)
  tooltip=tool,
  font_size=380,
  width=350,
- height=350,
+ height=436,
  position=pos,
- scale={1/scale[1],1/scale[2],1/scale[3]},
  click_function=func,
  color={1,1,1,transparency}
  }
