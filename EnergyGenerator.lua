@@ -298,6 +298,7 @@ energyTable={
   date="20220225"
  }
 }
+self.max_typed_number=99
 
 function onLoad(state)
  if state and state!=""then
