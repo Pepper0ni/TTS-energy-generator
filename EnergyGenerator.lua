@@ -284,19 +284,50 @@ energyTable={
   }
  },
  {set="Brilliant Stars",
+  api=true,
+  code="swsh12pt5",
   rarity="C",
   types={
-   Grass={steamUrl="1826780185929555880/372B5B066A086B8C2BE6BB12BFF22A06E670A7D4/",num="E1"},
-   Fire={steamUrl="1826780185929553692/3C455F9E5B065CA3F187437CEF7C0C1DC18D3364/",num="E2"},
-   Water={steamUrl="1826780185929554213/1AC32F5486DADA025C75AF6C50826F5DD65C7310/",num="E3"},
-   Lightning={steamUrl="1826780185929555089/70E625A480476310B1BE4D353E3D963A2677488C/",num="E4"},
-   Psychic={steamUrl="1826780185929554817/CFD75E425D8617FF11F3880BEE539FEDE12950D8/",num="E5"},
-   Fighting={steamUrl="1826780185929555505/B823653C20374BF18DF0447C5C0E4D4BABB16B97/",num="E6"},
-   Darkness={steamUrl="1826780185929553931/AF97A4F5165E94AA167231105A337E131E2E487E/",num="E7"},
-   Metal={steamUrl="1826780185929554488/1686C79E1368D62332155EC5545CBB716D5A1015/",num="E8"},
+   Grass={num="152"},
+   Fire={num="153"},
+   Water={num="154"},
+   Lightning={num="155"},
+   Psychic={num="156"},
+   Fighting={num="157"},
+   Darkness={num="158"},
+   Metal={num="159"},
   },
   date="20220225"
- }
+ },
+ {set="Scarlet & Violet",
+  api=true,
+  code="sve",
+  basic=true,
+  rarity="C",
+  types={
+   Grass={num="1"},
+   Fire={num="2"},
+   Water={num="3"},
+   Lightning={num="4"},
+   Psychic={num="5"},
+   Fighting={num="6"},
+   Darkness={num="7"},
+   Metal={num="8"},
+  },
+  date="20230331"
+ },
+ {set="Gen 9 Secret",
+  rarity="HR",
+  basic=true,
+  api=true,
+  types={
+   Grass={code="sv2",setName="Paldea Evolved",date="20230609",num="278"},
+   Fire={code="sv3",setName="Obsidian Flames",date="20230811",num="230"},
+   Water={code="sv2",setName="Paldea Evolved",date="20230609",num="279"},
+   Lightning={code="sv1",setName="Scarlet & Violet",date="20230331",num="257"},
+   Fighting={code="sv1",setName="Scarlet & Violet",date="20230331",num="258"},
+  }
+ },
 }
 self.max_typed_number=99
 
@@ -385,7 +416,11 @@ function onObjectLeaveContainer(cont,leaving)
  if cont~=self then return end
  local setTable=energyTable[curSet]
  leaving.setCustomObject({face=getImageURL(),back=getSteamUrl("809997459557414686/9ABD9158841F1167D295FD1295D7A597E03A7487/")})
- leaving.setName(curType.." Energy")
+ if setTable.basic then
+  leaving.setName("Basic "..curType.." Energy")
+ else
+  leaving.setName(curType.." Energy")
+ end
  leaving.setDescription((setTable.types[curType].setName or setTable.set).." #"..setTable.types[curType].num)
  if setTable.rarity then leaving.setDescription(leaving.getDescription().." "..setTable.rarity)end
  leaving.memo=((setTable.types[curType].date or setTable.date)..setTable.types[curType].num)
