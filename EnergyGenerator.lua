@@ -1,5 +1,6 @@
 energyTable={
  {set="Base",
+  display="Base Set",
   api=true,
   code="base1",
   rarity="C",
@@ -14,6 +15,7 @@ energyTable={
   date="19990109"
  },
  {set="Expedition Base Set",
+  display="E-Card",
   api=true,
   code="ecard1",
   rarity="C",
@@ -28,6 +30,7 @@ energyTable={
   date="20020915"
  },
  {set="Ruby & Sapphire",
+  display="EX era",
   api=true,
   code="ex1",
   rarity="C",
@@ -41,7 +44,19 @@ energyTable={
   },
   date="20030701"
  },
- {set="Emerald",
+ {set="EX energies",
+  display="EX holo",
+  types={
+   Grass={steamUrl="2343629677880319136/CADDBDA7830051F99D5D5F92FC95FA61A25F93E5",num="g"},
+   Fire={steamUrl="2343629677880321272/7986641E761E1F2EFC2CA97F277C3679E2A91FE1",num="r"},
+   Water={steamUrl="2343629677880322866/B4DB42E68CCC32462EF05F671B87573DA191BD1F",num="w"},
+   Lightning={steamUrl="2343629677880322061/53444B9A79733C5990B1791284FBBA024DAF39DB",num="l"},
+   Psychic={steamUrl="2343629677880320405/489F5C0F0599A6E414F16644D0E834176E679F3F",num="p"},
+   Fighting={steamUrl="2343629677880317646/B13F72EF9D58D9101FEBEE41CC48FA7C4F12FC25",num="f"}
+  },
+  date="20030701"
+ },
+ {set="Emerald",--5
   api=true,
   code="ex9",
   rarity="RH",
@@ -56,6 +71,7 @@ energyTable={
   date="20050501"
  },
  {set="Holon Phantoms",
+  display="HP",
   api=true,
   code="ex13",
   rarity="RH",
@@ -70,6 +86,7 @@ energyTable={
   date="20060501"
  },
  {set="Power Keepers",
+  display="PK",
   api=true,
   code="ex16",
   rarity="RH",
@@ -83,36 +100,50 @@ energyTable={
   },
   date="20070202"
  },
- {set="Diamond & Pearl",
-  api=true,
-  code="dp1",
-  rarity="C",
+ {set="Diamond & Pearl Energies",
+  display="DPP",
   types={
-   Grass={num="123"},
-   Fire={num="124"},
-   Water={num="125"},
-   Lightning={num="126"},
-   Psychic={num="127"},
-   Fighting={num="128"},
-   Darkness={num="129"},
-   Metal={num="130"}
+   Grass={steamUrl="2343629677863832988/CF6EA8E45765E56FA878C83DF984CFC07AFA497F",num="g"},
+   Fire={steamUrl="2343629677863837434/3516B0FA01F916B212633F1787E1891A954F4EE2",num="r"},
+   Water={steamUrl="2343629677863834882/FD799DE45B23E0D4AA55A5DA3758BFD4512BF928",num="w"},
+   Lightning={steamUrl="2343629677863834341/DF224402C3415074747FD8B071DE8FB4DD7FAFD3",num="l"},
+   Psychic={steamUrl="2343629677863833671/1BA63785A474429BB304C61255E4B22AFDFE9228",num="p"},
+   Fighting={steamUrl="2343629677863832508/AA01D7E8B52A60FF3EF5BC9C0E9B1781FCB3E536",num="f"},
+   Darkness={steamUrl="2343629677863835835/305F9A1F1838228443D79261AB9FA7BB3205F3AA",num="d"},
+   Metal={steamUrl="2343629677863836773/BC1F533351EB02592819AB466D12532A53CE5298",num="m"}
   },
   date="20070501"
  },
  {set="Movie Commemoration Random Pack",
+  display="JP Only Movie",
   types={
-   Grass={steamUrl="1832405798625465500/D3730F4B293AB62AB619693A2CB66F775773DC7C/",num="E1"},
-   Fire={steamUrl="1832405798625455940/509F5D4C4FC7777ACD7C262255FD40E8AAD5462D/",num="E2"},
-   Water={steamUrl="1832405798625485038/0A15524996F5202AE08493ED09AE0AC47B6A5CD8/",num="E3"},
-   Lightning={steamUrl="1832405798625494298/F8DFA471580360CB70787FA0889BD65D7240FD69/",num="E4"},
-   Psychic={steamUrl="1832405798625513601/B00633C1C3D9963186F18792FD692591D2743132/",num="E5"},
-   Fighting={steamUrl="1832405798625522357/12D4FAB3EDA2E47C3A56A5F2A5D90FA54173E2DD/",num="E6"},
-   Darkness={steamUrl="1832405798625455574/3CAEED33508C134DFBF7DE1EBEAC9E00B534A639/",num="E7"},
-   Metal={steamUrl="1832405798625531534/F2EEA63644E26D0EDA05D8BA1ECF15952ADBF36D/",num="E8"}
+   Grass={steamUrl="1832405798625465500/D3730F4B293AB62AB619693A2CB66F775773DC7C",num="g"},
+   Fire={steamUrl="1832405798625455940/509F5D4C4FC7777ACD7C262255FD40E8AAD5462D",num="r"},
+   Water={steamUrl="1832405798625485038/0A15524996F5202AE08493ED09AE0AC47B6A5CD8",num="w"},
+   Lightning={steamUrl="1832405798625494298/F8DFA471580360CB70787FA0889BD65D7240FD69",num="l"},
+   Psychic={steamUrl="1832405798625513601/B00633C1C3D9963186F18792FD692591D2743132",num="p"},
+   Fighting={steamUrl="1832405798625522357/12D4FAB3EDA2E47C3A56A5F2A5D90FA54173E2DD",num="f"},
+   Darkness={steamUrl="1832405798625455574/3CAEED33508C134DFBF7DE1EBEAC9E00B534A639",num="d"},
+   Metal={steamUrl="1832405798625531534/F2EEA63644E26D0EDA05D8BA1ECF15952ADBF36D",num="m"}
   },
   date="20090718"
  },
+ {set="HeartGold & SoulSilver Energies",--10
+  display="HGSS Border",
+  types={
+   Grass={steamUrl="2343629677876910470/47D6E5303F54C2C3893C1A4D1CBAB57EF95E6421",num="g"},
+   Fire={steamUrl="2343629677876911495/297B5D6617946FD7B79F82E5F282C141F6C1F667",num="r"},
+   Water={steamUrl="2343629677876913078/EB9405786CEE39034730BA1FDAD4C8E5113DA3F1",num="w"},
+   Lightning={steamUrl="2343629677876914607/1E690F3EB695CC2B997478E97F10674AB08E03E7",num="l"},
+   Psychic={steamUrl="2343629677876915976/256EEC288C26A6C90325CBAEE3DD0F44D6603967",num="p"},
+   Fighting={steamUrl="2343629677876916960/28FAFC71C3958413A26A34018991DD9D460FE425",num="f"},
+   Darkness={steamUrl="2343629677876918212/925E160271FB44AF0280E0BECC37EF19F14CFB35",num="d"},
+   Metal={steamUrl="2343629677876919189/C851C41BBC04D7EA86DC2E0AF00819F49FDF7AAB",num="m"}
+  },
+  date="20100210"
+ },
  {set="HeartGold & SoulSilver",
+  display="HGSS art",
   api=true,
   code="hgss1",
   rarity="C",
@@ -178,17 +209,18 @@ energyTable={
   },
   date="20160222"
  },
- {set="Premium Champion Pack",
+ {set="Premium Champion Pack",--15
+  display="JP only BREAK",
   types={
-   Grass={steamUrl="1826780185929566902/E45311C6220C493CA3C4EB2AF5C0159DAC30505A/",num="E1"},
-   Fire={steamUrl="1826780185929565257/0A45F2A992524F7CF3B06F5844B91D369C886BB5/",num="E2"},
-   Water={steamUrl="1826780185929557394/B53B3B212AC022D2F63321B506B48C01BC48356D/",num="E3"},
-   Lightning={steamUrl="1826780185929658153/64A245A57616D852ABD5F8642E51E26360FEA6F9/",num="E4"},
-   Psychic={steamUrl="1826780185929566466/EEE00F8A2965ABA69787FE4EF45F3E3C7226DF0E/",num="E5"},
-   Fighting={steamUrl="1826780185929565784/13E554629E5EF15FB7CA2FADD41238B6F5F8D8A7/",num="E6"},
-   Darkness={steamUrl="1826780185929566147/8D2FC67A2409D375AEC24FA7F80EB1E935885FA5/",num="E7"},
-   Metal={steamUrl="1826780185929556601/A7ECCDAF131757924EE05C9DB8454713CC7E5708/",num="E8"},
-   Fairy={steamUrl="1826780185929565521/51D0C1018AE46B2C3A95BDEA5C2E811FD7A78322/",num="E8"}
+   Grass={steamUrl="1826780185929566902/E45311C6220C493CA3C4EB2AF5C0159DAC30505A",num="g"},
+   Fire={steamUrl="1826780185929565257/0A45F2A992524F7CF3B06F5844B91D369C886BB5",num="r"},
+   Water={steamUrl="1826780185929557394/B53B3B212AC022D2F63321B506B48C01BC48356D",num="w"},
+   Lightning={steamUrl="1826780185929658153/64A245A57616D852ABD5F8642E51E26360FEA6F9",num="l"},
+   Psychic={steamUrl="1826780185929566466/EEE00F8A2965ABA69787FE4EF45F3E3C7226DF0E",num="p"},
+   Fighting={steamUrl="1826780185929565784/13E554629E5EF15FB7CA2FADD41238B6F5F8D8A7",num="f"},
+   Darkness={steamUrl="1826780185929566147/8D2FC67A2409D375AEC24FA7F80EB1E935885FA5",num="d"},
+   Metal={steamUrl="1826780185929556601/A7ECCDAF131757924EE05C9DB8454713CC7E5708",num="m"},
+   Fairy={steamUrl="1826780185929565521/51D0C1018AE46B2C3A95BDEA5C2E811FD7A78322",num="y"}
   },
   date="20160416"
  },
@@ -209,18 +241,19 @@ energyTable={
   },
   date="20161102"
  },
- {set="Sun & Moon",
+ {set="Sun & Moon Energies",
+  display="Sun & Moon",
   rarity="C",
   types={
-   Grass={steamUrl="1826780185929832402/5FE64CA2668E4A91ED64DD05E59D74CF958EADEB/",num="E1"},
-   Fire={steamUrl="1826780185929832714/8853045CD1F634E848895927164FB5A522E39CEC/",num="E2"},
-   Water={steamUrl="1826780185929832999/7B1E59BB866F9CBD81888416808101B3519CB8C9/",num="E3"},
-   Lightning={steamUrl="1826780185929833512/90A9B8E6DA4C2F28FB267D97D7213D465DBF3186/",num="E4"},
-   Psychic={steamUrl="1826780185929833839/B5C3FFB69E5180AEF58AABC6B648419A973AD1E5/",num="E5"},
-   Fighting={steamUrl="1826780185929834195/8BB262C2D63EA80E6C04F09136CCD043D75EC2BE/",num="E6"},
-   Darkness={steamUrl="1826780185929834635/F274B54CA2718B0CDADEA30355C2CA435E8A4E1A/",num="E7"},
-   Metal={steamUrl="1826780185929834975/1892F7B06D18C0B1AB7F4FFEC69FF52239D21B5F/",num="E8"},
-   Fairy={steamUrl="1826780185929835278/E2A48B5AD439570D5613491267C9B649055ACA4F/",num="E8"}
+   Grass={steamUrl="1826780185929832402/5FE64CA2668E4A91ED64DD05E59D74CF958EADEB",num="g"},
+   Fire={steamUrl="1826780185929832714/8853045CD1F634E848895927164FB5A522E39CEC",num="r"},
+   Water={steamUrl="1826780185929832999/7B1E59BB866F9CBD81888416808101B3519CB8C9",num="w"},
+   Lightning={steamUrl="1826780185929833512/90A9B8E6DA4C2F28FB267D97D7213D465DBF3186",num="l"},
+   Psychic={steamUrl="1826780185929833839/B5C3FFB69E5180AEF58AABC6B648419A973AD1E5",num="p"},
+   Fighting={steamUrl="1826780185929834195/8BB262C2D63EA80E6C04F09136CCD043D75EC2BE",num="f"},
+   Darkness={steamUrl="1826780185929834635/F274B54CA2718B0CDADEA30355C2CA435E8A4E1A",num="d"},
+   Metal={steamUrl="1826780185929834975/1892F7B06D18C0B1AB7F4FFEC69FF52239D21B5F",num="m"},
+   Fairy={steamUrl="1826780185929835278/E2A48B5AD439570D5613491267C9B649055ACA4F",num="y"}
   },
   date="20170203"
  },
@@ -239,33 +272,35 @@ energyTable={
    Fairy={code="sm3",setName="Burning Shadows",date="20170805",num="169"}
   }
  },
- {set="Team Up",
+ {set="Team Up Energies",
+  display="Team Up",
   rarity="C",
   types={
-   Grass={steamUrl="1832405798628986164/8DAE81347A07897ACD085586A20D95CF2598E347/",num="E1"},
-   Fire={steamUrl="1832405798628987149/3187D01AA63593BAD2A13058C9A64986771B83D5/",num="E2"},
-   Water={steamUrl="1832405798628988741/04A35BDD099EBE7E18DBB9D7E7AB999D5BA66D9E/",num="E3"},
-   Lightning={steamUrl="1832405798628989261/5967BCC4EB91584ABEB1680F1CF83B70302EAF52/",num="E4"},
-   Psychic={steamUrl="1832405798628989709/D12DB2BE41A2185C11D87062EC08E285969F82A5/",num="E5"},
-   Fighting={steamUrl="1832405798628991233/69EB109A4FE5D47D1B58FB59EC2517A30DB1DA20/",num="E6"},
-   Darkness={steamUrl="1832405798628991928/8B177CCA848C1747B3790053958FAA79F3E0314B/",num="E7"},
-   Metal={steamUrl="1832405798628992609/CC82A01EDC098ABEDA1376083E17D028F387A0A7/",num="E8"},
-   Fairy={steamUrl="1832405798628993182/0CBE5BDF044B22B16510A8699F3B00CAC229C14C/",num="E9"}
+   Grass={steamUrl="1832405798628986164/8DAE81347A07897ACD085586A20D95CF2598E347",num="g"},
+   Fire={steamUrl="1832405798628987149/3187D01AA63593BAD2A13058C9A64986771B83D5",num="r"},
+   Water={steamUrl="1832405798628988741/04A35BDD099EBE7E18DBB9D7E7AB999D5BA66D9E",num="w"},
+   Lightning={steamUrl="1832405798628989261/5967BCC4EB91584ABEB1680F1CF83B70302EAF52",num="l"},
+   Psychic={steamUrl="1832405798628989709/D12DB2BE41A2185C11D87062EC08E285969F82A5",num="p"},
+   Fighting={steamUrl="1832405798628991233/69EB109A4FE5D47D1B58FB59EC2517A30DB1DA20",num="f"},
+   Darkness={steamUrl="1832405798628991928/8B177CCA848C1747B3790053958FAA79F3E0314B",num="d"},
+   Metal={steamUrl="1832405798628992609/CC82A01EDC098ABEDA1376083E17D028F387A0A7",num="m"},
+   Fairy={steamUrl="1832405798628993182/0CBE5BDF044B22B16510A8699F3B00CAC229C14C",num="y"}
   },
   date="20190201"
  },
- {set="Sword & Shield",
+ {set="Sword & Shield Energies",--20
+  display="SWSH",
   rarity="C",
   types={
-   Grass={steamUrl="1832405798628838691/9F72772F0F21C4F6455D35CDDA7C0387D2C344CD/",num="E1"},
-   Fire={steamUrl="1832405798628839998/882EB1317DC1D12FF4994221E57FE41B4ECF8D70/",num="E2"},
-   Water={steamUrl="1832405798628840522/64FB79B3C680D7B11BAEFD367E03115243508AC2/",num="E3"},
-   Lightning={steamUrl="1832405798628842568/67A8211D36AE2FF603C7A4B775C894EA25EA9155/",num="E4"},
-   Psychic={steamUrl="1832405798628843075/407375AECC10AD4150F2C70FBB63A0BAC0A9AE05/",num="E5"},
-   Fighting={steamUrl="1832405798628843991/B1DDC67C84E0E0E1527F85058DCDF038DB9D8663/",num="E6"},
-   Darkness={steamUrl="1832405798628844608/70C62511CA9F2631D1E1DE691F4099A8102EE7EC/",num="E7"},
-   Metal={steamUrl="1832405798628845093/EC66EEED31A9BAB8CCEDBB7152B0B4EC4C9D6F55/",num="E8"},
-   Fairy={steamUrl="1832405798628845735/B64816866B1D0B67963CE2E9114F77A2E9C3BD2E/",num="E9"}
+   Grass={steamUrl="1832405798628838691/9F72772F0F21C4F6455D35CDDA7C0387D2C344CD",num="g"},
+   Fire={steamUrl="1832405798628839998/882EB1317DC1D12FF4994221E57FE41B4ECF8D70",num="r"},
+   Water={steamUrl="1832405798628840522/64FB79B3C680D7B11BAEFD367E03115243508AC2",num="w"},
+   Lightning={steamUrl="1832405798628842568/67A8211D36AE2FF603C7A4B775C894EA25EA9155",num="l"},
+   Psychic={steamUrl="1832405798628843075/407375AECC10AD4150F2C70FBB63A0BAC0A9AE05",num="p"},
+   Fighting={steamUrl="1832405798628843991/B1DDC67C84E0E0E1527F85058DCDF038DB9D8663",num="f"},
+   Darkness={steamUrl="1832405798628844608/70C62511CA9F2631D1E1DE691F4099A8102EE7EC",num="d"},
+   Metal={steamUrl="1832405798628845093/EC66EEED31A9BAB8CCEDBB7152B0B4EC4C9D6F55",num="m"},
+   Fairy={steamUrl="1832405798628845735/B64816866B1D0B67963CE2E9114F77A2E9C3BD2E",num="y"}
   },
   date="20200207"
  },
@@ -283,7 +318,8 @@ energyTable={
    Metal={code="swsh7",setName="Evolving Skies",date="20210827",num="237"}
   }
  },
- {set="Brilliant Stars",
+ {set="Brilliant Stars Energies",
+  display="BS",
   api=true,
   code="swsh12pt5",
   rarity="C",
@@ -296,23 +332,26 @@ energyTable={
    Fighting={num="157"},
    Darkness={num="158"},
    Metal={num="159"},
+   Fairy={noApi=true,steamUrl="5938629525077704809/AA601036EC69849338EA983AF7061CB66798AC22",num="y",setName="Brilliant Stars Energies"}
   },
   date="20220225"
  },
  {set="Scarlet & Violet",
+  display="SV",
   api=true,
   code="sve",
   basic=true,
   rarity="C",
   types={
-   Grass={num="1"},
-   Fire={num="2"},
-   Water={num="3"},
-   Lightning={num="4"},
-   Psychic={num="5"},
-   Fighting={num="6"},
-   Darkness={num="7"},
-   Metal={num="8"},
+   Grass={num="1",setName="Scarlet & Violet Energies"},
+   Fire={num="2",setName="Scarlet & Violet Energies"},
+   Water={num="3",setName="Scarlet & Violet Energies"},
+   Lightning={num="4",setName="Scarlet & Violet Energies"},
+   Psychic={num="5",setName="Scarlet & Violet Energies"},
+   Fighting={num="6",setName="Scarlet & Violet Energies"},
+   Darkness={num="7",setName="Scarlet & Violet Energies"},
+   Metal={num="8",setName="Scarlet & Violet Energies"},
+   Fairy={noApi=true,steamUrl="5938629525077705258/59388EFF16D70C1BFED9924ADFFAFD252E05F5A5",num="y",setName="Scarlet & Violet Energies"}
   },
   date="20230331"
  },
@@ -325,6 +364,7 @@ energyTable={
    Fire={code="sv3",setName="Obsidian Flames",date="20230811",num="230"},
    Water={code="sv2",setName="Paldea Evolved",date="20230609",num="279"},
    Lightning={code="sv1",setName="Scarlet & Violet",date="20230331",num="257"},
+   Psychic={code="sv3pt5",setName="151",date="20230922",num="207"},
    Fighting={code="sv1",setName="Scarlet & Violet",date="20230331",num="258"},
   }
  },
@@ -347,9 +387,16 @@ end
 function DrawUI()
  local scale={1,1,0.75}
  local count=1
- makeButtonUI("<","prevSet",{-1.7,0.1,1.8},"Previous Set",scale,1)
- makeButtonUI(">","nextSet",{1.7,0.1,1.8},"Next Set",scale,1)
+ local params={
+  function_owner=self,
+  font_size=380,
+  width=350,
+  height=436,
+ }
+ butWrapper(params,{-1.7,0.1,1.8},"<","Previous Set","prevSet")
+ butWrapper(params,{1.7,0.1,1.8},">","Next Set","nextSet")
  local XMLTable={}
+ params.color={1,1,1,0}
 
  for Type,data in pairs(energyTable[curSet].types) do
   _G["changeType"..Type]=function()changeType(Type)end
@@ -359,41 +406,29 @@ function DrawUI()
   else
    pos={1.7+(-3.4*(count%2)),0,-1.8+(1.2*math.floor((count-4)/2))}
   end
-  XMLTable[#XMLTable+1]=makeTypeUI(Type,scale,pos)
+  butWrapper(params,{pos[1]*-1,pos[2],pos[3]},"",Type,"changeType"..Type)
+  XMLTable[#XMLTable+1]={
+   tag="Image",
+   attributes={
+    image=Type,
+    height=112.5,
+    width=90,
+    position=tostring(pos[1]*100).." "..tostring(pos[3]*100).." -10",
+    rotation="0 0 180",
+    raycastTarget=false
+  }}
   count=count+1
  end
  self.UI.setXmlTable(XMLTable)
 end
 
-function makeTypeUI(Type,scale,pos)
- makeButtonUI("","changeType"..Type,{pos[1]*-1,pos[2],pos[3]},Type,scale,0)
- return {
-  tag="Image",
-  attributes={
-   image=Type,
-   height=112.5,
-   width=90,
-   position=tostring(pos[1]*100).." "..tostring(pos[3]*100).." -10",
-   rotation="0 0 180",
-   raycastTarget=false
-  }}
-end
-
-function makeButtonUI(text,func,pos,tool,scale,transparency)
- local params={
- function_owner=self,
- label=text,
- tooltip=tool,
- font_size=380,
- width=350,
- height=436,
- position=pos,
- click_function=func,
- color={1,1,1,transparency}
- }
+function butWrapper(params,pos,label,tool,func)
+ params.position=pos
+ params.label=label
+ params.tooltip=tool
+ params.click_function=func
  self.createButton(params)
 end
-
 
 function changeType(newType)
  curType=newType
@@ -415,7 +450,7 @@ end
 function onObjectLeaveContainer(cont,leaving)
  if cont~=self then return end
  local setTable=energyTable[curSet]
- leaving.setCustomObject({face=getImageURL(),back=getSteamUrl("809997459557414686/9ABD9158841F1167D295FD1295D7A597E03A7487/")})
+ leaving.setCustomObject({face=getImageURL(),back=getSteamUrl("809997459557414686/9ABD9158841F1167D295FD1295D7A597E03A7487")})
  if setTable.basic then
   leaving.setName("Basic "..curType.." Energy")
  else
@@ -428,7 +463,7 @@ end
 
 function getImageURL()
  local setTable=energyTable[curSet]
- if setTable.api then
+ if setTable.api and not setTable.types[curType].noApi then
   return "https://images.pokemontcg.io/"..(setTable.code or setTable.types[curType].code).."/"..setTable.types[curType].num.."_hires.png?count="..setTable.types[curType].num
  else
   return getSteamUrl(setTable.types[curType].steamUrl)
@@ -436,7 +471,7 @@ function getImageURL()
 end
 
 function getSteamUrl(url)
- return "http://cloud-3.steamusercontent.com/ugc/"..url
+ if url then return"http://cloud-3.steamusercontent.com/ugc/"..url.."/"end
 end
 
 function changeArt()
