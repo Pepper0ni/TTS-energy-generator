@@ -366,6 +366,8 @@ energyTable={
    Lightning={code="sv1",setName="Scarlet & Violet",date="20230331",num="257"},
    Psychic={code="sv3pt5",setName="151",date="20230922",num="207"},
    Fighting={code="sv1",setName="Scarlet & Violet",date="20230331",num="258"},
+   Darkness={code="sv6pt5",setName="Shrouded Fable",date="20240802",num="98"},
+   Metal={code="sv6pt5",setName="Shrouded Fable",date="20240802",num="99"},
   }
  },
 }
@@ -471,7 +473,7 @@ function getImageURL()
 end
 
 function getSteamUrl(url)
- if url then return"http://cloud-3.steamusercontent.com/ugc/"..url.."/"end
+ if url then return"https://steamusercontent-a.akamaihd.net/ugc/"..url.."/"end
 end
 
 function changeArt()
