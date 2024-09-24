@@ -341,7 +341,6 @@ energyTable={
   api=true,
   code="sve",
   basic=true,
-  rarity="C",
   types={
    Grass={num="1",setName="Scarlet & Violet Energies"},
    Fire={num="2",setName="Scarlet & Violet Energies"},
@@ -369,6 +368,23 @@ energyTable={
    Darkness={code="sv6pt5",setName="Shrouded Fable",date="20240802",num="98"},
    Metal={code="sv6pt5",setName="Shrouded Fable",date="20240802",num="99"},
   }
+ },
+ {set="SV Tera",
+  display="Tera",
+  api=true,
+  code="sve",
+  basic=true,
+  types={
+   Grass={num="9",setName="Scarlet & Violet Energies"},
+   Fire={num="10",setName="Scarlet & Violet Energies"},
+   Water={num="11",setName="Scarlet & Violet Energies"},
+   Lightning={num="12",setName="Scarlet & Violet Energies"},
+   Psychic={num="13",setName="Scarlet & Violet Energies"},
+   Fighting={num="14",setName="Scarlet & Violet Energies"},
+   Darkness={num="15",setName="Scarlet & Violet Energies"},
+   Metal={num="16",setName="Scarlet & Violet Energies"}
+  },
+  date="20230331"
  },
 }
 self.max_typed_number=99
@@ -460,7 +476,7 @@ function onObjectLeaveContainer(cont,leaving)
  end
  leaving.setDescription((setTable.types[curType].setName or setTable.set).." #"..setTable.types[curType].num)
  if setTable.rarity then leaving.setDescription(leaving.getDescription().." "..setTable.rarity)end
- leaving.memo=((setTable.types[curType].date or setTable.date)..setTable.types[curType].num)
+ leaving.memo=((setTable.types[curType].date or setTable.date)..buildCardNumber(setTable.types[curType].num))
 end
 
 function getImageURL()
@@ -474,6 +490,22 @@ end
 
 function getSteamUrl(url)
  if url then return"https://steamusercontent-a.akamaihd.net/ugc/"..url.."/"end
+end
+
+
+function buildCardNumber(cardNum)
+ local numOnly=string.gsub(cardNum,"[^%d]","")
+ if numOnly~=cardNum then
+  local finalNum=(tonumber(numOnly)or 0)+500
+  for c in cardNum:gmatch"[^%d]" do
+   if c=="?"then c="}"end
+   if c=="!"then c="{"end
+   finalNum=string.byte(c)-65+finalNum
+  end
+  cardNum=tostring(finalNum)
+ end
+ while #cardNum<3 do cardNum="0"..cardNum end
+ return cardNum
 end
 
 function changeArt()
